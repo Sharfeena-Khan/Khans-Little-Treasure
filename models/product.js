@@ -20,7 +20,7 @@ const productSchema = new mongoose.Schema({
     },
    
      
-    image: {
+    photo: {
         data: Buffer,
         contentType : String
     },
@@ -59,16 +59,16 @@ const productSchema = new mongoose.Schema({
     },
     
    
-    active :{
-        type : Boolean , 
-        required : true,
-        default :true
-    },
-    isDelete :{
-        type : Boolean , 
-        required : true,
-        default :false
-    }
+    // active :{
+    //     type : Boolean , 
+    //     required : true,
+    //     default :true
+    // },
+    // isDelete :{
+    //     type : Boolean , 
+    //     required : true,
+    //     default :false
+    // }
         
 
 })
