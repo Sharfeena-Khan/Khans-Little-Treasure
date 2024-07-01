@@ -12,6 +12,7 @@ router.get("/secret/:userId", requireSignin, isAuth, isAdmin,(req, res) => {
 });
 
 
+
 // User profile Read and Update
 router.get("/user/:userId", requireSignin, isAuth,readProfile )
 router.put("/user/:userId", requireSignin, isAuth,updateProfile )

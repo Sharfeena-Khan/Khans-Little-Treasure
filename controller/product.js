@@ -424,6 +424,7 @@ exports.  list_Sub_Categorise= async(req, res)=>{
       
     };
 
+    
     exports.photo = async(req, res, next)=>{
       if(req.product.photo.data){
         res.set("Content-Type", req.product.photo.contentType)

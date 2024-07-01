@@ -56,6 +56,7 @@ router.get("/products/photo/:productId", photo)
 
 
 
+
 router.param("userId", userById);
 router.param("productId", productById);
 
