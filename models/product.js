@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const { ObjectId } = require("mongodb")
+// const { ObjectId } = require("mongodb")
+// const subCategory = require('./subCategory')
 
 const productSchema = new mongoose.Schema({
     name:{
@@ -32,9 +33,21 @@ const productSchema = new mongoose.Schema({
         max : 10
 
     },
+    sold:{
+        type: Number,
+        default :0
+
+    },
+    mainCategory :{
+        type: String, // Change the type to String to store the category name
+        ref: 'Category',
+        required : true
+
+    },
+
     category: {
-        type: ObjectId, // Change the type to String to store the category name
-        ref: 'subCategory',
+        type: String, // Change the type to String to store the category name
+        ref: 'Sub_category',
         required : true
       },
 
@@ -71,6 +84,8 @@ const productSchema = new mongoose.Schema({
     // }
         
 
-})
+},
+{ timestamps: true }
+)
 
 module.exports = mongoose.model("Product", productSchema)

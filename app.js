@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const expressValidator = require("express-validator")
+const cors = require("cors")
 
 
 //app
@@ -34,6 +35,7 @@ app.use(bodyParser.json())
 app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(expressValidator())
+app.use(cors())
 
 
 // routes middleware
@@ -43,4 +45,4 @@ app.use('/api',userRouter)
 app.use('/api',categoryRouter)
 app.use('/api',productRouter)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;

@@ -117,6 +117,29 @@ exports.isAuth = (req, res, next) => {
     next();
 }
 
+// exports.isAuth = (req, res, next) => {
+//     console.log("req.profile._id:", req.profile?._id);
+//     console.log("req.auth._id:", req.auth?._id);
+
+//     // Convert ObjectId to string for comparison
+//     const profileId = req.profile._id.toString();
+//     const authId = req.auth._id;
+
+//     // Compare as strings
+//     const user = profileId === authId;
+//     console.log("***************************************",authId);
+//     console.log("***************************************",profileId);
+
+//     if (!user) {
+//         console.log("isAuth: Access denied");
+//         return res.status(403).json({ error: "Access denied" });
+//     }
+
+//     console.log("isAuth: Access granted");
+//     next();
+// };
+
+
 
 exports.isAdmin = (req, res, next) => {
     if (req.profile.role === false) {
