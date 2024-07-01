@@ -236,7 +236,7 @@ exports.updatePdt = async (req, res) => {
  * sell / arrival
  * by sell= /products?sortBy=sold&order=desc&limit=4
  * by arrival= /products?sortBy=createdAt&order=desc&limit=4
- * if no params are sent all products are returned
+ * if no params are sent all products are returned 
  */
 
 exports.list = async (req, res) => {
